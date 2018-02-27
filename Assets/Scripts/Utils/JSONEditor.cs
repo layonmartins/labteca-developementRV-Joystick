@@ -51,7 +51,7 @@ public class JSONEditor {
 
         if (file == "journalItems0")
         {
-            string content = "{\"name\" : \"Análise da Solução\",\"objects\": [{\"index\" : \"0\",\"name\" : \"Procure pelo laboratório onde está o pHmetro e faça a medição do produto (NaCL) que esta no seu iventário.\",\"isDone\" : \"False\",\"numberOfPrerequisites\" : \"0\"},{	\"index\" : \"1\",\"name\" : \"Com o auxílio dos equipamentos, descubra qual é o composto presente na solução.\",\"isDone\" : \"False\",\"numberOfPrerequisites\" : \"1\",\"indexPrerequisiteOf\" : [\"0\"]},{\"index\" : \"2\",\"name\" : \"Calcule a concentração percentual da amostra, em gramas por 100ml.\",\"isDone\" : \"False\",\"numberOfPrerequisites\" : \"1\",\"indexPrerequisiteOf\" : [\"1\"]}]}";
+            string content = "{\"name\" : \"Análise da Solução\",\"objects\": [{\"index\" : \"0\",\"name\" : \"Utilize o mapa para encontrar em qual sala está o pHmetro (equipamento que faz a medição de PH). Depois coloque o produto (Béquer com NaCL) que esta no seu iventário no pHmetro e faça a medição do PH.\",\"isDone\" : \"False\",\"numberOfPrerequisites\" : \"0\"},{	\"index\" : \"1\",\"name\" : \"Com o auxílio dos equipamentos, descubra qual é o composto presente na solução.\",\"isDone\" : \"False\",\"numberOfPrerequisites\" : \"1\",\"indexPrerequisiteOf\" : [\"0\"]},{\"index\" : \"2\",\"name\" : \"Calcule a concentração percentual da amostra, em gramas por 100ml.\",\"isDone\" : \"False\",\"numberOfPrerequisites\" : \"1\",\"indexPrerequisiteOf\" : [\"1\"]}]}";
             return JSON.Parse(content);
         }
         else if (file == "products")

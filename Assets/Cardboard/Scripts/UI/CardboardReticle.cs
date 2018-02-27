@@ -109,7 +109,7 @@ public class CardboardReticle : MonoBehaviour, ICardboardPointer {
   /// ray sent from the camera on the object.
   public void OnGazeStay(Camera camera, GameObject targetObject, Vector3 intersectionPosition) {
     SetGazeTarget(intersectionPosition);
-        if (gazedAt != null && Input.GetButtonDown("Jump"))
+        if (gazedAt != null && Input.GetButtonDown("Fire1"))
         ExecuteEvents.Execute(gazedAt, null, (TimedInputHandler handler, BaseEventData data) => handler.HandleTimedInput());
     }
 

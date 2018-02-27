@@ -27,7 +27,7 @@ public class Map : MonoBehaviour {
 		distanceToCenterX = -(player.position.x-XCenter)/(Mathf.Abs(pos1.position.x - pos0.position.x)/2);
 
 		playerMarker.localPosition = new Vector3 (map.sizeDelta.x * distanceToCenterX/2, map.sizeDelta.y * distanceToCenterY/2,0);
-        playerMarker.rotation = Quaternion.Euler(0, 0, 0);
+        //playerMarker.rotation = Quaternion.Euler(0, 0, 0);
         //playerMarker.rotation = Quaternion.Euler (0, 0, 180 - player.rotation.eulerAngles.y);
     }
 
@@ -51,9 +51,9 @@ public class Map : MonoBehaviour {
 					marker.GetComponentsInChildren<Image>()[1].rectTransform.anchorMin= new Vector2(0.5f,0f);
 				}
 
-				marker.GetComponentsInChildren<Image>()[1].rectTransform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+				//marker.GetComponentsInChildren<Image>()[1].rectTransform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
 				//marker.GetComponentsInChildren<Image>()[1].rectTransform.anchoredPosition = Vector2.zero;
-				marker.GetComponentInChildren<Text>().rectTransform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+				//marker.GetComponentInChildren<Text>().rectTransform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
 
 				marker.GetComponentInChildren<Text>().text = gameState.interactBox.GetComponent<AccessEquipmentBehaviour>().equipName;
 

@@ -28,6 +28,7 @@ public class HUDController : MonoBehaviour {
     public bool mapBlocked = false;
 
     public RectTransform hover;
+    public Text txtIntegarir;
 
     //para inverter o estado do alpha do group canvas
     void changeAlphaGroupCanvas(GameObject button, bool b)
@@ -74,21 +75,21 @@ public class HUDController : MonoBehaviour {
 
        //Listing buttons of the joystick
        // for the map
-       if(!mapBlocked)
-        if ((Input.GetButtonDown("Fire3")) && !lockKey)
-        {
-            CallMapTrigger();
-        }
-        //for the inventory
-        if ((Input.GetButtonDown("Fire2")) && !lockKey)
-        {
-            CallInventoryTrigger();
-        }
-        //for the tablet
-        if ((Input.GetButtonDown("Fire1")) && !lockKey)
-        {
-            CallTabletTrigger();
-        }
+       //if(!mapBlocked)
+       // if ((Input.GetButtonDown("Fire3")) && !lockKey)
+       // {
+       //     CallMapTrigger();
+       // }
+       // //for the inventory
+       // if ((Input.GetButtonDown("Fire2")) && !lockKey)
+       // {
+       //     CallInventoryTrigger();
+       // }
+       // //for the tablet
+       // if ((Input.GetButtonDown("Fire1")) && !lockKey)
+       // {
+       //     CallTabletTrigger();
+       // }
 
 
         if (mapUp)
@@ -167,7 +168,8 @@ public class HUDController : MonoBehaviour {
 	public void CallInventoryTrigger(){
 		if (!lockKey)
 			CallInventory(!inventoryUp);
-	}
+        txtIntegarir.enabled = false;
+    }
 	/// <summary>
 	/// Calls the inventory.
 	/// </summary>
@@ -242,9 +244,9 @@ public class HUDController : MonoBehaviour {
         }
 
 	public void RefreshKeys(){
-		keysText [0].text = inventoryKey.ToString ();
-		keysText [1].text = journalKey.ToString ();
-		keysText [2].text = mapKey.ToString ();
+		//keysText [0].text = inventoryKey.ToString ();
+		//keysText [1].text = journalKey.ToString ();
+		//keysText [2].text = mapKey.ToString ();
 	}
 	/// <summary>
 	/// Alternates the state of the player.

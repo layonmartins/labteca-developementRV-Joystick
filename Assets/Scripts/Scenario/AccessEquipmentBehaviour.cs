@@ -26,6 +26,11 @@ public class AccessEquipmentBehaviour : InteractObjectBase {
     public Button exit;
     public GameObject gameControler;
     public Canvas dicaLocomotionCanvas;
+    public Canvas DisplayY;
+    public Image setinha;
+    public TimedInputButtonPhMeter LigarButton;
+    public TimedInputButtonPhMeter MedirButton;
+    public bool Interacting;
 
     void Start(){
 		if (fadeTime == 0)
@@ -34,7 +39,10 @@ public class AccessEquipmentBehaviour : InteractObjectBase {
 			setCanvasAlphaForce(0f);
 		}
 		fadedOut = true;
-	}
+        setinha.gameObject.SetActive(false);
+        LigarButton.enabled = false;
+        MedirButton.enabled = false;
+    }
 
 	void Update () {
 		if(callInteract){
@@ -96,6 +104,11 @@ public class AccessEquipmentBehaviour : InteractObjectBase {
         gameControler.GetComponent<HUDController>().mapBlocked = true;
         dicaLocomotionCanvas.GetComponent<CanvasGroup>().alpha = 0f;
         dicaLocomotionCanvas.enabled = false;
+        DisplayY.GetComponent<CanvasGroup>().alpha = 0f;
+        setinha.gameObject.SetActive(true);
+        LigarButton.enabled = true;
+        MedirButton.enabled = true;
+        Interacting = true;
     }
 
 	/*public void fadeIn(){

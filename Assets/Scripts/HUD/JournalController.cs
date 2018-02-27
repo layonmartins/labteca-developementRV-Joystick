@@ -41,7 +41,7 @@ public class JournalController : TabletState {
 	}
 
 	public void changeExperiment(int expo){
-        experimentText.text = "Ande pelo laboratório"; //JournalSaver.GetExperimentName (expo);//"Desafio " +(expo+1);
+        experimentText.text = "Medir o PH."; //JournalSaver.GetExperimentName (expo);//"Desafio " +(expo+1);
 		LoadExperiment (expo);
 		SaveExperiment (experimentNumber);
 		if (experimentNumber != expo) {

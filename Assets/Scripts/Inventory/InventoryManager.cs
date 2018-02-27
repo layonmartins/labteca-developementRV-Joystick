@@ -49,6 +49,9 @@ public class InventoryManager : MonoBehaviour {
 	private RectTransform labelRect;
 	private string hoverName;
 
+    public AccessEquipmentBehaviour interacting;
+    public Text txtIntegarir;
+
     void Start(){
 		refreshTab (null,false);
 		itemType [0] = ItemType.Liquids;
@@ -59,7 +62,8 @@ public class InventoryManager : MonoBehaviour {
 		refreshGrid ();
 
 		labelRect = GameObject.Find ("GameController").GetComponent<HUDController>().hover;
-	}
+        txtIntegarir.enabled = false;
+    }
 	/// <summary>
 	/// Generates the index for an ItemInventoryBase.
 	/// </summary>
@@ -600,7 +604,15 @@ public class InventoryManager : MonoBehaviour {
 		selectedObject.GetComponentInChildren<Image>().sprite = selectedIcon;
 
 		refreshButtons ();
-	}
+
+        //Debug.Log("Chamar o clique do botão action interagir se estiver interagindo");
+        if (interacting.Interacting)
+            actionButtonClick();
+        else
+        {
+            txtIntegarir.enabled = true;
+        }
+    }
 	/// <summary>
 	/// Determinates what to do when action button is clicked
 	/// </summary>

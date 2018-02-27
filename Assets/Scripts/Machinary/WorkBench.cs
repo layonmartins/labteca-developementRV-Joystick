@@ -28,12 +28,16 @@ public class WorkBench : GameStateBase{
 	public Pipette pipette;
 	public Spatula spatula;
 	public WashBottle washBottle;
-	
-	public void Start () {
+
+    
+
+    public void Start () {
 		writingLabel = false;
 		cameraState.enabled = false;
 	    cameraState.GetComponent<AudioListener> ().enabled = false;
-	}
+        
+
+    }
 	
 	protected override void UpdateState (){}
 	

@@ -35,8 +35,8 @@ public class FPSControler : MonoBehaviour {
         
         Vector3 moveDirection = Camera.main.transform.forward;
         float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
-        transform.Rotate(0, h * velocity, 0);
+       // float h = Input.GetAxis("Horizontal");
+        //transform.Rotate(0, h * velocity, 0);
         if(walking)
         controller.SimpleMove(v * moveDirection * velocity);
         
